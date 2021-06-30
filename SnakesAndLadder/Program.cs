@@ -9,6 +9,7 @@ namespace SnakesAndLadder
         {
 
             int playerPosition = 0;
+            int count = 0;
 
             while (playerPosition <= 100)
             {
@@ -49,9 +50,11 @@ namespace SnakesAndLadder
                 {
                     playerPosition = playerPosition + dieValue;
                     Console.WriteLine("Player Current position is: " + playerPosition);
+                    Console.WriteLine("Total number of times dice rolled :"+ count);
                     break;
 
                 }
+                count++;
             }
 
         }
