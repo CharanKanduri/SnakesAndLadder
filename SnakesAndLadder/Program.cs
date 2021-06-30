@@ -25,19 +25,31 @@ namespace SnakesAndLadder
                     if (playerPosition < 0) playerPosition = 0;
                 }
 
-                if (optionCheck == 1)
+
+                if (playerPosition + dieValue < 100)
                 {
-                    Console.WriteLine("Player Option is Ladder");
+
+                    if (optionCheck == 1)
+                    {
+                        Console.WriteLine("Player Option is Ladder");
+                        playerPosition = playerPosition + dieValue;
+                        Console.WriteLine("Player Current position is: " + playerPosition);
+                    }
+
+                    if (optionCheck == 2)
+                    {
+                        Console.WriteLine("Player Option is Snake :-(");
+                        playerPosition = playerPosition - dieValue;
+                        if (playerPosition < 0) playerPosition = 0;
+                        Console.WriteLine("Player Current position is: " + playerPosition);
+
+                    }
+                }
+                else if (playerPosition + dieValue == 100 && optionCheck == 1)
+                {
                     playerPosition = playerPosition + dieValue;
                     Console.WriteLine("Player Current position is: " + playerPosition);
-                }
-
-                if (optionCheck == 2)
-                {
-                    Console.WriteLine("Player Option is Snake :-(");
-                    playerPosition = playerPosition - dieValue;
-                    if (playerPosition < 0) playerPosition = 0;
-                    Console.WriteLine("Player Current position is: " + playerPosition);
+                    break;
 
                 }
             }
