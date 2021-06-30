@@ -6,7 +6,7 @@ namespace SnakesAndLadder
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int playerPosition = 0;
         }
     }
 }
