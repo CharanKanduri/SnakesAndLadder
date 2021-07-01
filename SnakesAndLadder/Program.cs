@@ -44,6 +44,18 @@ namespace SnakesAndLadder
                 }
 
 
+
+               
+
+                if (optionCheck == 1)
+                    {
+                        Console.WriteLine("Player Option is Ladder");
+                        playerPosition = playerPosition + dieValue;
+                        Console.WriteLine("Player Current position is: " + playerPosition);
+                    }
+
+                if (optionCheck == 2)
+
                 if (playerPosition + dieValue < 100)
                 {
 
@@ -55,6 +67,7 @@ namespace SnakesAndLadder
                     }
 
                     if (optionCheck == 2)
+
                     {
                         Console.WriteLine("Player Option is Snake :-(");
                         playerPosition = playerPosition - dieValue;
@@ -62,6 +75,10 @@ namespace SnakesAndLadder
                         Console.WriteLine("Player Current position is: " + playerPosition);
 
                     }
+
+                
+               
+
                 }
                 else if (playerPosition + dieValue == 100 && optionCheck == 1)
                 {
@@ -70,6 +87,7 @@ namespace SnakesAndLadder
                     Console.WriteLine("Total number of times dice rolled :"+ count);
                     break;
 
+
                 }
                 count++;
             }
@@ -77,4 +95,4 @@ namespace SnakesAndLadder
 
         }
     }
-}
+
