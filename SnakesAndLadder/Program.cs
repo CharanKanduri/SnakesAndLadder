@@ -11,11 +11,19 @@ namespace SnakesAndLadder
             int playerPosition = 0;
             int count = 0;
 
+            //UC-3 Using Random class to generate the 3 available options
+            //0-Noplay
+            //1-Ladder
+            //3-snake 
+
+            int optionCheck = random.Next(0,3);
+
             while (playerPosition <= 100)
             {
                 Random random = new Random();
                 int dieValue = random.Next(1, 7);
                 Console.WriteLine("Number Obtained is:" + dieValue);
+
 
                 int optionCheck = random.Next(0, 3);
 
